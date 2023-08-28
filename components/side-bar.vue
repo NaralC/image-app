@@ -1,8 +1,5 @@
 <script setup lang="ts">
 const emits = defineEmits(["selectOption"]);
-const selectOption = (isColored: boolean) => {
-  emits("selectOption", isColored);
-};
 </script>
 
 <template>
@@ -22,13 +19,13 @@ const selectOption = (isColored: boolean) => {
         prepend-icon="mdi-image"
         title="Color Gallery"
         value="color"
-        @click="selectOption(true)"
+        @click="() => {emits('selectOption', true)}"
       />
       <v-list-item
         prepend-icon="mdi-dialpad"
         title="Grayscale Gallery"
         value="grayscale"
-        @click="selectOption(false)"
+        @click="() => {emits('selectOption', true)}"
       />
     </v-list>
   </v-navigation-drawer>
