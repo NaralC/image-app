@@ -1,14 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const isColored = ref(true);
+
+const onSelectOption = (param: boolean) => {
+  isColored.value = param;
+};
+</script>
 
 <template>
-  <VApp>
+  <v-app>
     <!-- Sidebar -->
-    <SideBar />
+    <SideBar @selectOption="onSelectOption" />
 
-    <VMain>
-      <!-- Cards -->
-    </VMain>
-  </VApp>
+    <!-- Cards -->
+    <v-main>
+      <ImageGallery :isColored="isColored" />
+    </v-main>
+  </v-app>
 </template>
 
 <style scoped>
