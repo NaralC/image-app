@@ -1,14 +1,18 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>
-    <VBtn>this works?</VBtn>
-  </div>
+  <VApp>
+    <!-- Sidebar -->
+    <SideBar />
+
+    <VMain>
+      <!-- Cards -->
+    </VMain>
+  </VApp>
 </template>
 
 <style scoped>
 * {
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 </style>
